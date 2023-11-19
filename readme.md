@@ -131,6 +131,6 @@ Pour acceder au site site web : `http://<SITE_NAME>.<DOMAINE>` *(ex: site1.yourd
 
 Pour acceder a PhpmyAdmin : `http://<PHPMYADMIN_SUBDOMAIN>.<DOMAINE>` *(ex: phpmyadmin.yourdomain.com)*
 
-**User :** `<MYSQL_USER>` *(défaut: user)*
+**User :** `<MYSQL_USER>` *(défaut: myuser)*
 
 **Password :** `<MYSQL_PASSWORD>` *(défaut: azerty)*
