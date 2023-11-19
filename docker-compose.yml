@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  apache:
+    image: httpd:latest
+    container_name: ${SITE_NAME}-apache
+    volumes:
+      - ./www:/usr/local/apache2/htdocs
+    networks:
+      - frontend
+
+  mysql:
+    image: mysql:latest
+    container_name: ${SITE_NAME}-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    networks:
+      - frontend
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: ${SITE_NAME}-phpmyadmin
+    environment:
+      PMA_HOST: ${SITE_NAME}-mysql
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.${SITE_NAME}_phpmyadmin.rule=Host(`${PHPMYADMIN_SUBDOMAIN}.${DOMAIN}`)"
+    networks:
+      - frontend
+
+networks:
+  frontend:
+    external: true
