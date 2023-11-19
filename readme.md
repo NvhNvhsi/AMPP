@@ -113,7 +113,7 @@ Cliquez sur le bouton "Save" pour enregistrer la configuration.
 1. Lancez les services en utilisant Docker Compose :
 
 ```bash
-  sudo docker-compose up -d
+  sudo docker-compose up --build -d
 ```
 
 2. Vérifiez que les conteneurs sont en cours d'exécution :
