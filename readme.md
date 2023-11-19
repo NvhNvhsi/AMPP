@@ -108,7 +108,7 @@ Remplissez les champs suivants :
 - **Forward Port**: `80`
 
 Cliquez sur le bouton "Save" pour enregistrer la configuration.
-## Déploiment
+## Déploiement
 
 1. Lancez les services en utilisant Docker Compose :
 
