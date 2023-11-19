@@ -1,11 +1,12 @@
 version: '3'
 
 services:
-  apache:
-    image: httpd:latest
-    container_name: ${SITE_NAME}-apache
+
+  php-apache:
+    image: php:7.4-apache
+    container_name: ${SITE_NAME}-php
     volumes:
-      - ./www:/usr/local/apache2/htdocs
+      - ./www:/var/www/html
     networks:
       - frontend
 
