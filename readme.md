@@ -19,7 +19,7 @@ La racine du site correspond au répertoire 'www' au sein du dossier.
 Clonez ce référentiel sur votre serveur :
 
 ```bash
-  git clone https://github.com/votre-utilisateur/AMPP.git
+  git clone https://github.com/NvhNvhsi/AMPP.git
   cd AMPP
 ```
     
