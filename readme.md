@@ -16,13 +16,22 @@ La racine du site correspond au répertoire 'www' au sein du dossier.
 
 ## Installation
 
-Clonez ce référentiel sur votre serveur :
+1. Clonez ce référentiel sur votre serveur :
 
 ```bash
-  git clone https://github.com/NvhNvhsi/AMPP.git
-  cd AMPP
+git clone https://github.com/NvhNvhsi/AMPP.git
+cd AMPP
 ```
-    
+2. Renommez le projet
+
+```bash
+mv AMPP/ <NomDuProjet>
+```
+
+2. Entrez dans le repertoire dur projet
+```bash
+cd <NomDuProjet>
+```
 ## Configuration de l'environement
 
 Modifiez le fichier `.env` à la racine du projet. Ce fichier est utilisé pour stocker les variables d'environnement.
@@ -117,6 +126,11 @@ Cliquez sur le bouton "Save" pour enregistrer la configuration.
 Assurez-vous que les conteneurs apache, mysql, et phpmyadmin sont en cours d'exécution.
 
 ## Accès
+
 Pour acceder au site site web : `http://<SITE_NAME>.<DOMAINE>` *(ex: site1.yourdomain.com)*
 
 Pour acceder a PhpmyAdmin : `http://<PHPMYADMIN_SUBDOMAIN>.<DOMAINE>` *(ex: phpmyadmin.yourdomain.com)*
+
+**User :** `<MYSQL_USER>` *(défaut: user)*
+
+**Password :** `<MYSQL_PASSWORD>` *(défaut: azerty)*
